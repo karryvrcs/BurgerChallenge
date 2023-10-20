@@ -49,13 +49,23 @@ public class Order {
 
     }
 
-    public void printOrder(){
+    public void removeItem(int orderIndex){
+        if(orderIndex <= getItems().size()){
+            getItems().remove(orderIndex-1);
+        }
+    }
 
+    public void printOrder(){
+        int index = 0;
         for (Item item : items) {
+            index += 1;
+            System.out.print("[" + index + "] ");
             System.out.println(item);
         }
 
+        System.out.println("Order:");
         System.out.println("Total price: " + totalPrice);
+        System.out.println("---------------------------");
     }
 
 

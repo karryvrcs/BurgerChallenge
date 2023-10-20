@@ -91,7 +91,7 @@ class Burger extends Item{
         return switch (number) {
             case 1 -> new Burger("Cheese Burger", 45, 3);
             case 2 -> new Burger("Double Cheese Burger", 65, 3);
-            case 3 -> new Burger("Duluxe Burger", 75, 5);
+            case 3 -> new Burger("Deluxe Burger", 75, 5);
             default -> throw new IllegalStateException("Unexpected value: " + number);
         };
     }
